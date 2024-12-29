@@ -1,13 +1,23 @@
 document.getElementById('content').addEventListener("scroll",()=>{
     setTimeout(() => {
+        console.log();
+        
         trigger()
         herocard()
       }, 1000);
-    
+    scroller();
 })
 
 const scrol = document.getElementById('content')
 var i=1;
+
+function scroller(){
+    if (document.getElementById('scrollhost').getBoundingClientRect().top>(((window.innerHeight || document.documentElement.clientHeight)/5)*3)) {
+        document.getElementById('scrollhost').style.opacity=1;
+    }else{
+        document.getElementById('scrollhost').style.opacity=0;
+    }
+}
 
 function herocard(){
     //var scroler = scrol.scrollTop/100
@@ -17,6 +27,7 @@ function herocard(){
     const hero = document.getElementById('hero')
     //console.log('sc: '+scroler);
 
+    
     if(trig1>((window.innerHeight || document.documentElement.clientHeight) - 100)){
         heroow.className= 'scroln'
         hero.className= 'big'

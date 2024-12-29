@@ -9,6 +9,7 @@
 
     <title>Codemania V5.0 </title>
     <link rel="stylesheet" href="./style/style.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="./style/animations.css">
     
 </head>
 
@@ -32,8 +33,10 @@
             Are You Ready to Compete?<br>
             Take the challenge.</span><br>
             </p>
-            <button href="#">Register Now</button>
-            <button href="#">Event Guide</button>
+            <div class="btns">
+                <button href="#">Register Now</button>
+                <button href="#">Event Guide</button>
+            </div>
     </div>
 
     <div id="content">
@@ -41,17 +44,21 @@
         <!-- <div id="hero">
             <img src="./images/logo/cm.png" alt="Codemania Logo"height="auto">
         </div> -->
-
-        <img src="https://www.geekboots.com/_next/image?url=https:%2F%2Fcdn.geekboots.com%2Fgeek%2Fscroll-down-arrow-animation-screenshot-1663661146798.gif&w=1080&q=75" width="20%" id="scrlanim" alt="scroll">
+        <div id="scrollhost" class="scrlanim">
+            <div id="a" class="arrows"></div>
+            <div id="b" class="arrows"></div>
+            <div id="c" class="arrows"></div>
+        </div>
+        
         <div class="emp"></div>
         <div class="emp"></div>
         <div id="trig1" class="triggers"></div>
         <div id="owlmid" class="triggers"></div>
         <div class="emp"></div>
         <div class="emp"></div>
-        <div class="emp"></div>
-        <div class="emp"></div>
         <div id="trig2" class="triggers"></div>
+        <div class="emp"></div>
+        <div class="emp"></div>
         <div id="about"></div>
 
         <section >
