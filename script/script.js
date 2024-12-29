@@ -77,12 +77,12 @@ function trigger(){
         owl.className= 'onorm'
     }
     if(midl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
-        console.log('middle');
+       // console.log('middle');
         owl.className= 'omid'
         heroow.className= 'scroln'
     }
     if(lefl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
-        console.log('left');
+        //console.log('left');
         owl.className= 'oleft'
     }
     /* if(botl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){

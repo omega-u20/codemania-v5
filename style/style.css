@@ -630,6 +630,13 @@ body{
     scroll-behavior: smooth;
 }
 
+img#scrlanim {
+    top: 38em;
+    display: block;
+    position: absolute;
+    opacity: .3;
+}
+
 .leftal {
     width: 100%;
 }
