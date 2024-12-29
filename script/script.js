@@ -7,12 +7,16 @@ document.getElementById('content').addEventListener("scroll",()=>{
       }, 1000);
     scroller();
 })
+document.getElementById('content').addEventListener('click',()=>{
+    document.getElementById('menudrop').style.transform='translateY(-50em)'
+    document.getElementById('menudrop').style.opacity=0
+})
 
 const scrol = document.getElementById('content')
 var i=1;
 
 function scroller(){
-    if (document.getElementById('scrollhost').getBoundingClientRect().top>(((window.innerHeight || document.documentElement.clientHeight)/5)*3)) {
+    if (document.getElementById('scrollhost').getBoundingClientRect().top>(((window.innerHeight || document.documentElement.clientHeight)/10)*7)) {
         document.getElementById('scrollhost').style.opacity=1;
     }else{
         document.getElementById('scrollhost').style.opacity=0;
@@ -72,14 +76,13 @@ function herocard(){
 
 console.log('script connected');
 
-const offset =100
-const mid = document.getElementById('owlmid')
-const left = document.getElementById('owlleft')
-//const bottom = document.getElementById('owlbot')
-const owl = document.getElementById('owl')
-const heroow = document.getElementById('heroover')
-
 function trigger(){
+    const offset =100
+    const mid = document.getElementById('owlmid')
+    const left = document.getElementById('owlleft')
+    //const bottom = document.getElementById('owlbot')
+    const owl = document.getElementById('owl')
+
     const midl = mid.getBoundingClientRect().top
     const lefl = left.getBoundingClientRect().top
     //const botl = bottom.getBoundingClientRect().top
@@ -90,7 +93,7 @@ function trigger(){
     if(midl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
        // console.log('middle');
         owl.className= 'omid'
-        heroow.className= 'scroln'
+        document.getElementById('heroover').className= 'scroln'
     }
     if(lefl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
         //console.log('left');
@@ -101,4 +104,13 @@ function trigger(){
         owl.className= 'obot'
     } */
 
+}
+
+function disapier(){
+    document.getElementById('menudrop').style.transform='translateY(-50em)'
+    document.getElementById('menudrop').style.opacity=0
+}
+function apear() {
+    document.getElementById('menudrop').style.transform='translateY(0em)'
+    document.getElementById('menudrop').style.opacity=1
 }

@@ -15,13 +15,21 @@
 
 <body>
     <header>
+        <a id="menu" onclick="apear()">≡</a>
         <a href="#contact">Contact Us</a>
         <a href="#more">More info</a>
         <a href="#prizes">Prizes & Rules</a>
         <a href="#timeline">Schedule</a>
         <a href="#about">About Us </a>
-        <a href="#" id="home"><img src="./images/logo/w/cs.png" alt="Home" width="auto" height="40vw"></a>
+        <a href="#scrollhost" id="home"><img src="./images/logo/w/cs.png" alt="Home" width="auto" height="40vw"></a>
     </header>
+    <div id="menudrop">
+        <a href="#about" onclick="disapier()">About Us </a>
+        <a href="#timeline" onclick="disapier()">Schedule</a>
+        <a href="#prizes" onclick="disapier()">Prizes & Rules</a>
+        <a href="#more" onclick="disapier()">More info</a>
+        <a href="#contact" onclick="disapier()">Contact Us</a>
+    </div>
     <div id="hero"  class="big">
         <img src="./images/logo/cm.png" alt="Codemania Logo"height="auto">
     </div>
@@ -93,7 +101,7 @@
 
         <section >
             <h2>Timeline</h2>
-            <table border="1">
+            <table border="0" id="tm">
                 <tr>
                     <td></td>
                     <td></td>
@@ -106,16 +114,16 @@
                         <p>January 1, 2025</p>
                     </td>
                     <td>
-                        <h3>Submission Deadline</h3>
-                        <p>March 1, 2025</p>
+                        <h3>Registration Closes</h3>
+                        <p>January 15, 2025</p>
                     </td>
                     <td>
-                        <h3>Judging Period</h3>
-                        <p>March 2 - March 15, 2025</p>
+                        <h3>Competition</h3>
+                        <p>February 1 - February 2, 2025</p>
                     </td>
                     <td>
-                        <h3>Judging Period</h3>
-                        <p>March 2 - March 15, 2025</p>
+                        <h3>Results Announcement</h3>
+                        <p>February 2, 2025</p>
                     </td>
                 </tr>
             </table>
@@ -142,7 +150,7 @@
                         
         <div id="more"></div>
 
-        <section >
+        <section id="last">
                 <h2>Meet Our Team</h2>
                 <table border="0">
                     <tr>
@@ -151,12 +159,12 @@
                                 <img src="./images/personal/GR-CO.jpg" id="pr1" alt="CO-CHAIR">
                             </div>
                         </td>
-                        <td>
-                            <div class="imcrop">
+                        <td class="alpam">
+                            <div class="imcrop" >
                                 <img src="./images/personal/VK-CO.jpg" id="pr2" alt="CO-CHAIR">
                             </div>
                         </td>
-                        <td>
+                        <td class="alpam">
                             <div class="imcrop">
                                 <img src="./images/personal/CM-S.jpg" id="pr3" alt="CO-CHAIR">
                             </div>
@@ -164,15 +172,15 @@
                     </tr>
                     <tr>
                         <td>
-                            <h3>Geeth Rangika</h3>
+                            <h3 class="alpa">Geeth Rangika</h3>
                             <p> Project CO-CHAIR</p>
                         </td>
                         <td>
-                            <h3>Vimarshana Kithmini </h3>
+                            <h3 class="alpa">Vimarshana Kithmini </h3>
                             <p> Project CO-CHAIR</p>
                         </td>
                         <td>
-                            <h3>Chanuthi Minothma</h3>
+                            <h3 class="alpa">Chanuthi Minothma</h3>
                             <p>Project Secretary</p>
                         </td>
                     </tr>
