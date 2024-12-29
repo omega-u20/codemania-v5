@@ -1,6 +1,6 @@
 document.getElementById('content').addEventListener("scroll",()=>{
     setTimeout(() => {
-        console.log();
+        magic()
         
         trigger()
         herocard()
@@ -11,6 +11,10 @@ document.getElementById('content').addEventListener('click',()=>{
     document.getElementById('menudrop').style.transform='translateY(-50em)'
     document.getElementById('menudrop').style.opacity=0
 })
+
+function magic(){
+    //const trig1 = document.getElementById('trig1').getBoundingClientRect().top
+}
 
 const scrol = document.getElementById('content')
 var i=1;
