@@ -13,6 +13,13 @@
     line-height: 20pt;
     -webkit-overscroll-behavior: auto;
     overscroll-behavior: auto;
+    cursor: context-menu;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+    overscroll-behavior: auto;
 }
 
 /*--------this is for the scrollbar----------*/
@@ -54,8 +61,6 @@
         font-weight: 900;
     }
     
-    body{
-    }
 
 div#menudrop {
     display: none;
@@ -144,27 +149,7 @@ td {
         clip-path: circle(50%);
         object-fit: cover;
     }
-    
-    #pr1{
-        width: 10em;
-        scale: 1.5;
-        padding-top: 18px;
-    }
-    #pr2{
-        width: 10em;
-        height: 10em;
-        scale: 2;
-        padding-top: 34px;
-        padding-right: 9px;
-    }
-    #pr3{
-        width: 10em;
-        height: 10em;
-        scale: 1.6;
-        margin-top: -12px;
-        padding-right: 9px;
-    }
-    
+
     header{
         top: 1em;
         width: 80%;
@@ -217,9 +202,7 @@ a#menu {
         display: block;
         margin-bottom: 9em;
     }
-    
-    #content{
-    }
+  
     #hero img{
         width: 50%;
     }
@@ -252,8 +235,8 @@ a#menu {
         margin-bottom: 5em;
     }
 
-section#last {
-}
+
+section#last {margin-bottom: 10em;}
     
     
     .obot {
@@ -994,16 +977,12 @@ a#menu {
     }
     
     footer {
-        width: 100%;
-        background-color: var(--main-super-duper-dark);
-        text-align: center;
-        height: 15%;
-        position: relative;
-        bottom: 0;
+        height: 11%;
     }
     
     footer p {
-        margin-bottom: 0;
+        font-size: 9pt;
+        line-height: 13pt;
     }
     
     hr {margin-top: 1px;margin-bottom: 28px;border-style: dashed;border-color: var(--main);border-width: 1px;border-bottom: none;width: 80%;}
@@ -1313,26 +1292,18 @@ section#why {
     }
     
     footer {
-        width: 100%;
-        background-color: var(--main-super-duper-dark);
-        text-align: center;
-        height: 15%;
-        position: relative;
-        bottom: 0;
+        height: 12%;
     }
     
     footer p {
-        margin-bottom: 0;
+        font-size: 9pt;
+        line-height: 13pt;
     }
     
     hr {margin-top: 1px;margin-bottom: 28px;border-style: dashed;border-color: var(--main);border-width: 1px;border-bottom: none;width: 80%;}
     
     ul {line-height: 22pt;}
     
-    table {
-    }
-
-td {}
     
     table .imcrop{
         display: inline-block;
@@ -1451,8 +1422,7 @@ a#menu {
         width: 80%;
     }
 
-    section{
-    }
+
 
 section#last {
     height: 70em;
@@ -1838,9 +1808,9 @@ h1{
     padding-bottom: 2em;
     border-radius: 1em;
     border: none;
-    z-index: 50;
+    z-index: 11;
     text-align: center;
-    transition: all 3s;
+    transition: all 1s;
     transform-style: preserve-3d;
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
@@ -1862,6 +1832,8 @@ footer {
     text-align: center;
     position: relative;
     bottom: 58px;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 footer p {
@@ -1875,6 +1847,11 @@ ul {line-height: 22pt;}
 table {
     width: 100%;
     text-align: center;
+}
+
+p.price {
+    font-size: 15pt;
+    padding-top: 0;
 }
 
 
@@ -1894,15 +1871,15 @@ table .imcrop{
     padding-top: 18px;
 }
 #pr2{
-    width: 10em;
-    height: 10em;
+    width: auto;
+    height: 11em;
     scale: 2;
     padding-top: 34px;
     padding-right: 9px;
 }
 #pr3{
-    width: 10em;
-    height: 10em;
+    width: auto;
+    height: 10.5em;
     scale: 1.6;
     margin-top: -12px;
     padding-right: 9px;
@@ -1924,8 +1901,16 @@ header{
 
 #home {
     float: left;
+    transition: opacity 1s;
 }
-
+#hmimg1{
+    opacity: 1;
+    transition: all 1s;
+}
+#hmimg2{
+    opacity: 0;
+    transition: all 1s;
+}
 header a{
     text-decoration: none;
     list-style: none;
@@ -1954,6 +1939,13 @@ header a:hover {
     display: block;
     margin-bottom: 9em;
 }
+#shop{
+    display: block;
+    margin-bottom: 9em;
+}
+/* #shopcont table{
+    width: 50%;
+} */
 #more{
     display: block;
     margin-bottom: 9em;
@@ -1969,7 +1961,7 @@ header a:hover {
     height: 108%;
     flex-direction: column;
     align-items: center;
-    z-index: 10;
+    z-index: 12;
 }
 
 .smallu{
@@ -1992,15 +1984,17 @@ section{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     border: solid var(--main) 1px;
+    transform: translateX(-200px);
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 2s;
 }
 
 section#why {
+    opacity: 1;
     margin-bottom: 0;
-    display: flex;
-    flex-direction: column;
 }
 
 
