@@ -99,11 +99,11 @@ function herocard(){
         heroow.className= 'scroln'
         hero.className= 'big'
     }
-    if((trig1<=((window.innerHeight || document.documentElement.clientHeight) - 100))&&(trig2>((window.innerHeight || document.documentElement.clientHeight) - 100))){
+    if((trig1<=((window.innerHeight || document.documentElement.clientHeight) - 100))||((trig2>((window.innerHeight || document.documentElement.clientHeight) - 100))&&(trig1<0))){
         heroow.className= 'scrol'
         hero.className= 'small'
     }
-    if(trig2<=((window.innerHeight || document.documentElement.clientHeight)/2)){
+    if(trig2<=((window.innerHeight || document.documentElement.clientHeight)-100)){
         heroow.className= 'scrolu'
         hero.className= 'smallu'
     }
@@ -143,12 +143,12 @@ function trigger(){
     const offset =100
     const mid = document.getElementById('owlmid')
     const left = document.getElementById('owlleft')
-    const bottom = document.getElementById('owlbot')
+    //const bottom = document.getElementById('owlbot')
     const owl = document.getElementById('owl')
 
     const midl = mid.getBoundingClientRect().top
     const lefl = left.getBoundingClientRect().top
-    const botl = bottom.getBoundingClientRect().top
+    //const botl = bottom.getBoundingClientRect().top
 
     if(midl>((window.innerHeight || document.documentElement.clientHeight) - offset)){
         owl.className= 'onorm'
@@ -179,10 +179,10 @@ function trigger(){
         //console.log('left');
         owl.className= 'oleft'
     }
-    if(botl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
+    /* if(botl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
         console.log('bottom');
         owl.className= 'obot'
-    }
+    } */
 
 }
 
