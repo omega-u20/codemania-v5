@@ -76,6 +76,7 @@ function magic(){
 }
 
 const scrol = document.getElementById('content')
+document.getElementById('hmimg2').style.display='none'
 var i=1;
 
 function scroller(){

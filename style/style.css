@@ -1180,7 +1180,7 @@ td.alpam {
     #home {
         display: flex;
         float: left;
-        margin-right: 49%;
+        margin-right: 50%;
     }
     
     header a{
@@ -1282,8 +1282,8 @@ section#why {
     }
     
     .omid {
-        top: 10%;
-        left: 12%;
+        top: 16%;
+        left: 4%;
         scale: 1.2;
         transform-style: preserve-3d;
         transform: perspective(3cm) rotateY(0deg);
@@ -1465,7 +1465,7 @@ section#why {
     #home {
         display: flex;
         float: left;
-        margin-right: 38%;
+        margin-right: 42%;
     }
     
     header a{
@@ -1832,7 +1832,7 @@ section#why {
     
     .omid {
         top: 12%;
-        left: 14.7%;
+        left: 11.7%;
         scale: 1.2;
         transform: perspective(3cm) rotateY(0deg);
     }
