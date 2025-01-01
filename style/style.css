@@ -24,6 +24,9 @@ html {
 .nullifier{
     display: none;
 }
+.dissabled-btn{
+    background-color: gray;
+}
 /*--------this is for the scrollbar----------*/
 /* width */
 ::-webkit-scrollbar {
