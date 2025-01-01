@@ -1847,6 +1847,10 @@ section#why {
     }
 
 }
+#abtcont p::first-letter{
+    font-size: 15pt;
+    font-weight: bold;
+}
 .alpa p {
     margin-top: .2em;
     margin-bottom: .3em;
