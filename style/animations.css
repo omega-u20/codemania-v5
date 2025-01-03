@@ -39,3 +39,24 @@
 #c{
     animation-delay: 2s;
 }
+
+#magictxt{
+    background: linear-gradient(130deg, var(--main) 40%, var(--main-light) 50%, var(--main) 60%);
+    background-clip: text;
+    background-size: 200% 100%;
+    color: transparent;
+    animation: magictxt 8s linear infinite;
+    font-weight: 800;
+    font-size: larger;
+}
+@keyframes magictxt {
+    0%{
+        background-position: 0% 0%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 200% 0%;
+    }
+}

@@ -2,7 +2,7 @@ document.getElementById('content').addEventListener("scroll",()=>{
     setTimeout(() => {        
         trigger()
         herocard()
-      }, 1000);
+      }, 100);
     setTimeout(()=>{
         magic()
     },200)
@@ -11,6 +11,11 @@ document.getElementById('content').addEventListener("scroll",()=>{
 document.getElementById('content').addEventListener('click',()=>{
     document.getElementById('menudrop').style.transform='translateY(-50em)'
     document.getElementById('menudrop').style.opacity=0
+})
+
+document.getElementById('heroover').addEventListener('scroll',function (e){
+    console.log(e.deltaY);
+    document.getElementById('content').scrollTop+= e.deltaY
 })
 
 function magic(){
@@ -78,6 +83,10 @@ function magic(){
 const scrol = document.getElementById('content')
 document.getElementById('hmimg2').style.display='none'
 var i=1;
+document.getElementById('menudrop').style.transform='translateY(-50em)'
+//const body = document.getElementsByTagName('body')[0]
+const content = document.getElementById('content');
+//document.getElementById('heroover').style.display='none'
 
 function scroller(){
     if (document.getElementById('scrollhost').getBoundingClientRect().top>(((window.innerHeight || document.documentElement.clientHeight)/10)*7)) {
@@ -93,49 +102,21 @@ function herocard(){
     const trig2 = document.getElementById('trig2').getBoundingClientRect().top
     const heroow = document.getElementById('heroover')
     const hero = document.getElementById('hero')
-    //console.log('sc: '+scroler);
+    var winh = (window.innerHeight || document.documentElement.clientHeight);
 
-    
-    if(trig1>((window.innerHeight || document.documentElement.clientHeight) - 100)){
-        heroow.className= 'scroln'
+    if(trig1>100){
+        heroow.style.opacity=0
+        heroow.style.transform='perspective(12cm) rotateX(30deg)'
         hero.className= 'big'
-    }
-    if((trig1<=((window.innerHeight || document.documentElement.clientHeight) - 100))||((trig2>((window.innerHeight || document.documentElement.clientHeight) - 100))&&(trig1<0))){
-        heroow.className= 'scrol'
-        hero.className= 'small'
-    }
-    if(trig2<=((window.innerHeight || document.documentElement.clientHeight)-100)){
-        heroow.className= 'scrolu'
+    }else if(((trig1<=200)&&(trig2>(winh -100)))&&((trig1<-100)&&(trig2>100))){
+            heroow.style.opacity=1
+            heroow.style.transform='perspective(5cm) rotateX(0deg)'
+            hero.className= 'small'
+    }else if(trig2<=200){
+        heroow.style.opacity=0
+        heroow.style.transform='perspective(12cm) rotateX(-30deg)'
         hero.className= 'smallu'
     }
-    /* if (scroler*10>100) {
-        hero.style.opacity=100+"%"
-    }else if (scroler>=42) {
-        
-    } else {
-        hero.style.opacity=scroler*10+"%"
-    }
-
-    if ((scroler>26)&&(scroler<42)) {
-        return
-    } else if ((scroler>=42)&&(scroler<=100)) {
-        hero.style.bottom=(26+i)+"%"
-        i=i+1
-    } else {
-        i=1
-        hero.style.bottom=scroler+"%"
-    }
-
-    if (scroler==0) {
-        hero.style.transform='rotateX('+20+'deg)'
-    } else if (scroler>20) {
-        hero.style.transform='perspective(6cm) rotateX('+(0)+'deg)'
-    } else {
-        hero.style.transform='perspective(6cm) rotateX('+(20/scroler)+'deg)'
-    }
-    if (scroler>=100) {
-        i=1
-    } */
 }
 
 console.log('script connected');
@@ -191,7 +172,15 @@ function disapier(){
     document.getElementById('menudrop').style.transform='translateY(-50em)'
     document.getElementById('menudrop').style.opacity=0
 }
+var on =false
 function apear() {
-    document.getElementById('menudrop').style.transform='translateY(0em)'
-    document.getElementById('menudrop').style.opacity=1
+    if (!on) {
+        document.getElementById('menudrop').style.transform='translateY(0em)'
+        document.getElementById('menudrop').style.opacity=1
+        on=true
+    } else {
+        document.getElementById('menudrop').style.transform='translateY(-50em)'
+        document.getElementById('menudrop').style.opacity=0        
+        on =false
+    }
 }
