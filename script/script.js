@@ -13,8 +13,8 @@ document.getElementById('content').addEventListener('click',()=>{
     document.getElementById('menudrop').style.opacity=0
 })
 
-document.getElementById('heroover').addEventListener('scroll',function (e){
-    console.log(e.deltaY);
+document.getElementById('heroover').addEventListener('wheel',function (e){
+    /* console.log('e'); */
     document.getElementById('content').scrollTop+= e.deltaY
 })
 
@@ -80,6 +80,7 @@ function magic(){
     }
 }
 
+console.log('script connected');
 const scrol = document.getElementById('content')
 document.getElementById('hmimg2').style.display='none'
 var i=1;
@@ -89,12 +90,14 @@ const content = document.getElementById('content');
 //document.getElementById('heroover').style.display='none'
 
 function scroller(){
-    if (document.getElementById('scrollhost').getBoundingClientRect().top>(((window.innerHeight || document.documentElement.clientHeight)/10)*7)) {
+    if (document.getElementById('scrltrig').getBoundingClientRect().top>= -100) {
         document.getElementById('scrollhost').style.opacity=1;
     }else{
         document.getElementById('scrollhost').style.opacity=0;
     }
 }
+var first =true
+var triggered =false
 
 function herocard(){
     //var scroler = scrol.scrollTop/100
@@ -104,22 +107,36 @@ function herocard(){
     const hero = document.getElementById('hero')
     var winh = (window.innerHeight || document.documentElement.clientHeight);
 
-    if(trig1>100){
+    if((trig1>200)&& !first && !triggered){
+        triggered =true
         heroow.style.opacity=0
         heroow.style.transform='perspective(12cm) rotateX(30deg)'
         hero.className= 'big'
-    }else if(((trig1<=200)&&(trig2>(winh -100)))&&((trig1<-100)&&(trig2>100))){
+        setTimeout(()=>{
+            heroow.style.display='none'
+            triggered =false
+        },1100)
+    }else if(((trig1<=200)&&(trig2>(winh -100)))&&((trig1<-100)&&(trig2>100))&& !triggered){
+        triggered =true
+            first=false
+            heroow.style.display='block'
+        setTimeout(()=>{
             heroow.style.opacity=1
             heroow.style.transform='perspective(5cm) rotateX(0deg)'
             hero.className= 'small'
-    }else if(trig2<=200){
+            triggered =false
+        },100)
+    }else if((trig2<=200)&& !triggered){
+        triggered =true
         heroow.style.opacity=0
         heroow.style.transform='perspective(12cm) rotateX(-30deg)'
         hero.className= 'smallu'
+        setTimeout(()=>{
+            heroow.style.display='none'
+            triggered =false
+        },1100)
     }
 }
-
-console.log('script connected');
 
 function trigger(){
     const offset =100

@@ -131,7 +131,7 @@ td {
 }
 
 #tm td {
-    width: fit-content;
+    width: 25%;
 }
     
     table .imcrop{
@@ -299,6 +299,18 @@ section#last {margin-bottom: 10em;}
         width: 100%;
         scroll-behavior: smooth;
     }
+
+#arrowhost .arrow {
+    width: 25px;
+    height: 25px;
+    border-right: solid var(--main);
+    border-bottom: solid var(--main);
+}
+
+div#arrowhost {
+    width: 55%;
+    left: -1%;
+}
     
     .emp {
         display: block;
@@ -363,7 +375,9 @@ section#last {margin-bottom: 10em;}
     
     hr {margin-top: 1px;margin-bottom: 28px;border-style: dashed;border-color: var(--main);border-width: 1px;border-bottom: none;width: 80%;}
     
-    ul {line-height: 22pt;}
+    ul {line-height: 22pt;width: 100%;}
+
+ul {}
     
     table {
         width: 100%;
@@ -604,6 +618,16 @@ a#menu {
         scroll-behavior: smooth;
     }
 
+.arrow {
+    scale: 0.5;
+    left: 0;
+}
+
+div#arrowhost {
+    top: 19%;
+    left: -9px;
+}
+
 #menudrop a:hover {
     color: var(--main-light);
 }
@@ -620,6 +644,10 @@ a#menu {
         display: block;
         margin-bottom: 30em;
     }
+
+.emp.emp1mob {
+    margin-bottom: 57vh;
+}
     .scrol{
         transform: perspective(5cm) rotateX(0deg);
         opacity: 1;
@@ -911,6 +939,13 @@ a#menu {
         scroll-behavior: smooth;
     }
 
+div#arrowhost {
+    rotate: 90deg;
+    top: 37.2em;
+    width: 211%;
+    left: -1%;
+}
+
 div.scrlanim {
     top: 80%;
 }
@@ -951,8 +986,12 @@ div.scrlanim {
 
     .emp {
         display: block;
-        margin-bottom: 30em;
+        margin-bottom: 30vh;
     }
+
+div.emp1mob {
+    margin-bottom: 57vh;
+}
     .scrol{
         transform: perspective(5cm) rotateX(0deg);
         opacity: 1;
@@ -978,9 +1017,13 @@ div.scrlanim {
     }
     
     div .triggers {
-        height: 1em;
-        width: 3em;
+        height: 1vh;
+        width: 2vw;
     }
+
+div#owlmid {
+    height: 2vh;
+}
     
     div#crdhero {
         width: 50%;
@@ -1042,7 +1085,7 @@ table#conttable {
 }
 
 table#tm {
-    height: 3em;
+    height: 19em;
 }
 
 table.tblprize {
@@ -1084,10 +1127,14 @@ tr.imgs {
 td {display: block;width: 100%;}
 
 td.tmdis {
+    padding-top: 12em;
+}
+
+td.tmdis:nth-child(1) {
     padding-top: 7em;
 }
 
-td.tmimg {padding-bottom: 7em;}
+td.tmimg {padding-bottom: 12em;}
 
 td.tmimg:hover {
     background-color: var(--main-super-duper-dark);
@@ -1332,6 +1379,16 @@ section#why {
         scroll-behavior: smooth;
     }
 
+#arrowhost .arrow {
+    width: 20px;
+    height: 20px;
+}
+
+div#arrowhost {
+    width: 75vh;
+    top: 71vh;
+}
+
 #menudrop a:hover {
     color: var(--main-light);
 }
@@ -1497,8 +1554,8 @@ a#menu {
         width: 65%;
     }
     .big{
-        top: 3em;
-        padding-top: 9em;
+        top: 25%;
+        padding-top: 0;
         width: 150%;
     }
     .small{
@@ -1603,6 +1660,15 @@ section#why {
         width: 100%;
         scroll-behavior: smooth;
     }
+
+div#arrowhost {
+    width: 55%;
+}
+
+#arrowhost .arrow {
+    width: 25px;
+    height: 25px;
+}
 
 div#menudrop {
     display: none;
@@ -1836,6 +1902,27 @@ section#why {
     }
 
 }
+#arrowhost{
+    position: relative;
+    top: 23%;
+    width: 59%;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    /* border: solid red; */
+    align-items: center;
+}
+
+div#arrowhost {}
+.arrow{
+    position: relative;
+    left: -14px;
+    width: 50px;
+    height: 50px;
+    border-right: solid var(--main) 5px;
+    border-bottom: solid var(--main) 5px;
+    transform: rotateZ(-45deg);
+}
 #f_logo {
     display: flex;
     flex-direction: row;
@@ -1914,6 +2001,7 @@ h1{
 }
 .emp {
     display: block;
+    /* border: solid red 3px; */
 }
 .scrol{
     opacity: 1;
@@ -1940,10 +2028,13 @@ h1{
     -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
     background-color: var(--main-super-dark-b);
+    transform: perspective(12cm) rotateX(45deg);
+    display: none;
 }
 
 div .triggers {
     display: block;
+    /* border: solid blue 2px; */
 }
 
 div#crdhero {
