@@ -13,6 +13,9 @@ document.getElementById('content').addEventListener('click',()=>{
     document.getElementById('menudrop').style.transform='translateY(-50em)'
     document.getElementById('menudrop').style.opacity=0
 })
+document.getElementById('timecont').addEventListener('click',function (e){
+    e.preventDefault()
+})
 
 document.getElementById('heroover').addEventListener('wheel',function (e){
     /* console.log('e'); */
