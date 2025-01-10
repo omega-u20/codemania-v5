@@ -72,7 +72,9 @@ html {
         font-weight: 900;
     }
     
-
+    .sublimel {
+        padding: 2em;
+    }
 div#menudrop {
     display: none;
 }
@@ -300,6 +302,10 @@ section#last {margin-bottom: 10em;}
         scroll-behavior: smooth;
     }
 
+.sublimel {
+    padding: 1em;
+}
+
 #arrowhost .arrow {
     width: 25px;
     height: 25px;
@@ -375,7 +381,7 @@ div#arrowhost {
     
     hr {margin-top: 1px;margin-bottom: 28px;border-style: dashed;border-color: var(--main);border-width: 1px;border-bottom: none;width: 80%;}
     
-    ul {line-height: 22pt;width: 100%;}
+    ul {line-height: 22pt;width: fit-content;position: relative;}
 
     table {
         width: 100%;
@@ -615,6 +621,10 @@ a#menu {
         width: 100%;
         scroll-behavior: smooth;
     }
+
+.sublimel {
+    padding: 1em;
+}
 
 .arrow {
     scale: 0.5;
@@ -937,6 +947,10 @@ a#menu {
         scroll-behavior: smooth;
     }
 
+.sublimel {
+    padding: 1em;
+}
+
 div#arrowhost {
     rotate: 90deg;
     top: 37.2em;
@@ -1039,7 +1053,7 @@ div#owlmid {
     
     hr {margin-top: 1px;margin-bottom: 28px;border-style: dashed;border-color: var(--main);border-width: 1px;border-bottom: none;width: 80%;}
     
-    ul {line-height: 22pt;width: 100%;}
+    ul {line-height: 22pt;width: 90%;}
     
     table {
         width: 100%;
@@ -1663,6 +1677,10 @@ section#why {
         scroll-behavior: smooth;
     }
 
+.sublimel {
+    padding: 2em;
+}
+
 div#arrowhost {
     width: 55%;
 }
@@ -1906,7 +1924,7 @@ section#why {
 }
 #arrowhost{
     position: relative;
-    top: 23%;
+    top: 12%;
     width: 59%;
     height: 5vh;
     display: flex;
@@ -1983,6 +2001,10 @@ body{
     width: 100%;
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+a#time_countdown_602137 {
+    cursor: context-menu;
 }
 
 .scrlanim {
@@ -2250,6 +2272,11 @@ section{
     transition: all 2s;
 }
 
+iframe {
+    cursor: none;
+    font-size: 20pt;
+}
+
 section#why {
     opacity: 1;
     margin-bottom: 0;
@@ -2293,7 +2320,13 @@ button{
     margin-left: .3vw;
     margin-right: .3vw;
 }
-
+.sublimel{
+    border: solid var(--main-boders) 2px;
+    border-radius: 2vh;
+    position: relative;
+    width: 82%;
+    margin-bottom: 1vh;
+}
 button:focus {
     border: solid var(--main) 1px;
 }
