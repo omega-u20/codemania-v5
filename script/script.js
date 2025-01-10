@@ -62,11 +62,12 @@ function magic(){
      if ((trig2<=(window.innerHeight || document.documentElement.clientHeight)-200)&& !(trig3<=50)) {
         el2.style.opacity = 1
         el2.style.transform ='translateX(0)'
-        document.getElementsByTagName('iframe')[0].addEventListener("load", ev => {
             const new_style_element = document.createElement("style");
+            console.log('created');
             new_style_element.textContent = "body { font-family: \"Geologica\"; } .text{font-size:20pt}"
-            ev.target.contentDocument.head.appendChild(new_style_element);
-        });
+        var i = document.getElementsByTagName('iframe')[0]//.head.appendChild(new_style_element);
+        console.log(i);
+        
     }else{
         el2.style.opacity = 0
         el2.style.transform ='translateX(-200px)'
