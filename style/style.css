@@ -377,8 +377,6 @@ div#arrowhost {
     
     ul {line-height: 22pt;width: 100%;}
 
-ul {}
-    
     table {
         width: 100%;
         text-align: center;
@@ -1279,6 +1277,10 @@ a#menu {
         margin-bottom: 5em;
     }
 
+#countdown {
+    font-size: 20pt;
+}
+
 section#last {
     height: 75em;
 }
@@ -1913,7 +1915,6 @@ section#why {
     align-items: center;
 }
 
-div#arrowhost {}
 .arrow{
     position: relative;
     left: -14px;
@@ -1955,6 +1956,8 @@ div#arrowhost {}
     position: relative;
     width: 100%;
     z-index: 32;
+    display: flex;
+    justify-content: center;
 }
 span#sub {
     line-height: 5pt;
@@ -2286,6 +2289,9 @@ button{
     transition: all .5s;
     position: relative;
     z-index: 15;
+    cursor: pointer;
+    margin-left: .3vw;
+    margin-right: .3vw;
 }
 
 button:focus {

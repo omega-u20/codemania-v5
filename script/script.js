@@ -5,6 +5,7 @@ document.getElementById('content').addEventListener("scroll",()=>{
       }, 100);
     setTimeout(()=>{
         magic()
+        document.getElementById('cdown').style=""
     },200)
     scroller();
 })
@@ -17,6 +18,13 @@ document.getElementById('heroover').addEventListener('wheel',function (e){
     /* console.log('e'); */
     document.getElementById('content').scrollTop+= e.deltaY
 })
+
+function regredirect(){
+    window.location.href='https://forms.gle/u3DZtj7929K4f8fu6'
+}
+function guidredirect(){
+    window.location.href='https://drive.google.com/file/d/1R4Hx6go8YQhttfv1zrvZmZxZeR1E9xcn/view?usp=drive_link'
+}
 
 function magic(){
     const trig1 = document.getElementById('about').getBoundingClientRect().top

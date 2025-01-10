@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./style/style.css"> <!-- Link to external CSS file -->
     <link rel="stylesheet" href="./style/animations.css">
     
+    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
 </head>
 
 <body>
@@ -59,8 +60,9 @@
                 <span id="magictxt">Are You Ready to Compete?</span></span>
                 </p>
                 <div class="btns">
-                    <button title="Stay Tuned✨" href="#" disabled class="dissabled-btn">Register Now</button>
-                    <button title="Stay Tuned✨" href="#" disabled class="dissabled-btn">Event Guide</button>
+                    <button title="Click here to Register✨" onclick="regredirect()" type="button" class="">Register Now</button>
+                    <button title="Click here to see Guidebook✨" onclick="guidredirect()" type="button" class="">Event Guide</button>
+                    <!-- <button title="Stay Tuned✨" href="#" disabled class="dissabled-btn">Event Guide</button> -->
                 </div>
         </div>
         <div class="emp emp1mob"></div>
@@ -138,7 +140,7 @@
                     </td>
                 </tr>
             </table>
-            
+            <a id="cdown" href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="Asia/Colombo" data-textcolor="#ffffff" data-date="2025-02-01 16:00" data-background="#3b3b3b" data-digitscolor="#00ffc7" data-unitscolor="#ffffff00">Codemania v5.0 Starts In</a>            
         </section>
         
         <div id="prizes"></div>
@@ -199,7 +201,13 @@
             </ul>
 
             <h4>Are You Ready to Compete? Take the challenge.</h4>
-                <button href="#" title="Stay Tuned✨" disabled class="dissabled-btn">Register Now</button>
+            
+            <div class="btns">
+                <button title="Click here to Register✨" onclick="regredirect()" type="button" class="">Register Now</button>
+                <button title="Click here to see Guidebook✨" onclick="guidredirect()" type="button" class="">Event Guide</button>
+                <!-- <button title="Stay Tuned✨" href="#" disabled class="dissabled-btn">Event Guide</button> -->
+            </div>
+                <!-- <button href="#" title="Stay Tuned✨" disabled class="dissabled-btn">Register Now</button> -->
         </section>
         
         <div id="shop"></div>
