@@ -128,6 +128,10 @@ div#menudrop {
         text-align: center;
     }
 
+img#t11 {
+    width: 26vw;
+}
+
 tr.imgs {
     height: fit-content;
 }
@@ -2038,7 +2042,7 @@ body{
     overflow-x: hidden;
 }
 
-img#t11 {clip-path: inset(29% 9% 39% 8%);/* width: 26vw; */}
+img#t11 {clip-path: inset(36% 14% 37% 21%);/* width: 26vw; */}
 
 a#time_countdown_602137 {
     cursor: context-menu;
@@ -2361,6 +2365,11 @@ button{
     cursor: pointer;
     margin-left: .3vw;
     margin-right: .3vw;
+}
+
+#shopcont button {
+    margin-bottom: 1vh;
+    width: 10vw;
 }
 .sublimel{
     border: solid var(--main-boders) 2px;
