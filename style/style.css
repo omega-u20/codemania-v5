@@ -270,16 +270,15 @@ section#last {margin-bottom: 10em;}
     }
     
     button{
-        background-color: var(--main-dark);
-        border: none;
         width: 8vw;
         height: 3em;
-        color: white;
         border-radius: 3em;
         font-size: 12pt;
-        padding: 0;
-        transition: all .5s;
     }
+
+#shopcont button {
+    width: 10vw;
+}
 
 }
 @media only screen and ((max-width: 810px) and (min-width: 768px)) {
@@ -735,6 +734,14 @@ div#arrowhost {
         width: 100%;
         text-align: center;
     }
+
+.alpa h3 {
+    font-size: 10pt;
+}
+
+.alpa p {
+    font-size: 9pt;
+}
 
 img#t11 {
     width: 41vw;
@@ -1682,6 +1689,10 @@ section#why {
         transition: all .5s;
     }
 
+#shopcont button {
+    width: 50vw;
+}
+
 }
 @media only screen and ((max-width: 1024px) and (min-width: 810px)) {
     span#sub {
@@ -1950,6 +1961,10 @@ section#why {
         height: 3em;
         font-size: 10pt;
     }
+
+#shopcont button {
+    width: 15vw;
+}
 
 }
 @media only screen and ((max-width: 1197px) and (min-width: 1024px)) {
@@ -2353,7 +2368,6 @@ section#why {
 }
 
 button{
-    background-color: var(--main-dark);
     border: none;
     color: white;
     border-radius: 3em;
@@ -2369,7 +2383,7 @@ button{
 
 #shopcont button {
     margin-bottom: 1vh;
-    width: 10vw;
+    /* width: 10vw; */
 }
 .sublimel{
     border: solid var(--main-boders) 2px;
