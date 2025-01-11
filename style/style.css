@@ -2370,6 +2370,7 @@ section#why {
 button{
     border: none;
     color: white;
+    background-color: var(--main-dark);
     border-radius: 3em;
     font-weight: bold;
     padding: 0;
