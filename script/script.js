@@ -28,7 +28,10 @@ function regredirect(){
     window.location.href='https://forms.gle/u3DZtj7929K4f8fu6'
 }
 function guidredirect(){
-    window.location.href='https://drive.google.com/file/d/1R4Hx6go8YQhttfv1zrvZmZxZeR1E9xcn/view?usp=drive_link'
+    window.location.href='https://drive.google.com/file/d/1YdW3bDm7fmV6CGc2YsuJQsjsUo7_SZ6g/view?usp=sharing'
+}
+function orderdirect(){
+    window.location.href='https://forms.gle/QfJoXQGAT5fWyd6n8'
 }
 
 function magic(){
@@ -62,11 +65,12 @@ function magic(){
      if ((trig2<=(window.innerHeight || document.documentElement.clientHeight)-200)&& !(trig3<=50)) {
         el2.style.opacity = 1
         el2.style.transform ='translateX(0)'
-            const new_style_element = document.createElement("style");
+            /* const new_style_element = document.createElement("style");
             console.log('created');
             new_style_element.textContent = "body { font-family: \"Geologica\"; } .text{font-size:20pt}"
-        var i = document.getElementsByTagName('iframe')[0]//.head.appendChild(new_style_element);
-        console.log(i);
+        var i = document.getElementsByTagName('iframe')[0].contentWindow.document//.getElementsByTagName('head')//.appendChild(new_style_element);
+        //var innerdoc = i.contentDocument || i.contentWindow.document;
+        console.log(i); */
         
     }else{
         el2.style.opacity = 0
@@ -161,12 +165,12 @@ function trigger(){
     const offset =100
     const mid = document.getElementById('owlmid')
     const left = document.getElementById('owlleft')
-    //const bottom = document.getElementById('owlbot')
+    const bottom = document.getElementById('owlbot')
     const owl = document.getElementById('owl')
 
     const midl = mid.getBoundingClientRect().top
     const lefl = left.getBoundingClientRect().top
-    //const botl = bottom.getBoundingClientRect().top
+    const botl = bottom.getBoundingClientRect().top
 
     if(midl>((window.innerHeight || document.documentElement.clientHeight) - offset)){
         owl.className= 'onorm'
@@ -197,10 +201,10 @@ function trigger(){
         //console.log('left');
         owl.className= 'oleft'
     }
-    /* if(botl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
+    if(botl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
         console.log('bottom');
         owl.className= 'obot'
-    } */
+    }
 
 }
 

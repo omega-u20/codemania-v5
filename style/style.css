@@ -128,8 +128,17 @@ div#menudrop {
         text-align: center;
     }
 
+tr.imgs {
+    height: fit-content;
+}
+
 td {
     width: 33.33%;
+}
+
+.imgs td {
+    height: fit-content;
+    width: 11%;
 }
 
 #tm td {
@@ -161,7 +170,7 @@ td {
         padding-left: 1em;
         padding-right: 1em;
         height: 1em;
-        width: 15vw;
+        width: 110px;
         display: flex;
     }
 
@@ -565,7 +574,7 @@ a#menu {
         height: 3em;
         color: white;
         border-radius: 3em;
-        font-size: 12pt;
+        font-size: 10pt;
         padding: 0;
         transition: all .5s;
     }
@@ -632,8 +641,9 @@ a#menu {
 }
 
 div#arrowhost {
-    top: 19%;
+    top: 17%;
     left: -9px;
+    width: 56vw;
 }
 
 #menudrop a:hover {
@@ -721,6 +731,10 @@ div#arrowhost {
         width: 100%;
         text-align: center;
     }
+
+img#t11 {
+    width: 41vw;
+}
     
     table .imcrop{
         display: inline-block;
@@ -892,7 +906,7 @@ a#menu {
         height: 3em;
         color: white;
         border-radius: 3em;
-        font-size: 12pt;
+        font-size: 9pt;
         padding: 0;
         transition: all .5s;
     }
@@ -953,8 +967,8 @@ a#menu {
 
 div#arrowhost {
     rotate: 90deg;
-    top: 37.2em;
-    width: 211%;
+    top: 36.2em;
+    width: 99vh;
     left: -1%;
 }
 
@@ -1070,7 +1084,7 @@ div#owlmid {
 }
 
 #shopcont table {
-    height: 12em;
+    height: 17em;
 }
 
 #shopcont table:nth-last-child(1) {
@@ -1079,11 +1093,17 @@ div#owlmid {
 }
 
 #shopcont table h2 {
-    font-size: 15pt;
+    font-size: 13pt;
 }
 
 #shopcont img {
-    width: 22em;
+    width: 98vw;
+    position: relative;
+    left: -12px;
+}
+
+img#t11 {
+    width: 54vw;
 }
 
 table#conttable {
@@ -1121,11 +1141,11 @@ tr {
 }
 
 tr.price1 {
-    margin-top: 26em;
+    margin-top: 19em;
 }
 
 tr.price {
-    margin-top: 50em;
+    margin-top: 56em;
     padding-left: 1em;
     padding-right: 1em;
     width: 91%;
@@ -1133,7 +1153,6 @@ tr.price {
 
 tr.imgs {
     margin-top: 4em;
-    background-image: linear-gradient(90deg, transparent, var(--main-super-dark), transparent);
 }
 
 td {display: block;width: 100%;}
@@ -1395,14 +1414,30 @@ section#why {
         scroll-behavior: smooth;
     }
 
+#shopcont table {
+    height: 24vh;
+}
+
+tr.price {
+    margin-top: 44em;
+}
+
+img#t11 {
+    width: 78vw;
+}
+
+tr.price1 {
+    margin-top: 20em;
+}
+
 #arrowhost .arrow {
     width: 20px;
     height: 20px;
 }
 
 div#arrowhost {
-    width: 75vh;
-    top: 71vh;
+    width: 105vh;
+    top: 103vh;
 }
 
 #menudrop a:hover {
@@ -1801,7 +1836,7 @@ div#menudrop {
         height: 1em;
         width: 12vw;
         display: flex;
-        font-size: 11pt;
+        font-size: 9pt;
     }
 
 a#menu {
@@ -1909,7 +1944,7 @@ section#why {
     button{
         width: 15vw;
         height: 3em;
-        font-size: 12pt;
+        font-size: 10pt;
     }
 
 }
@@ -2002,6 +2037,8 @@ body{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+img#t11 {clip-path: inset(29% 9% 39% 8%);/* width: 26vw; */}
 
 a#time_countdown_602137 {
     cursor: context-menu;
@@ -2097,6 +2134,10 @@ ul {line-height: 22pt;}
 table {
     width: 100%;
     text-align: center;
+}
+
+tr.imgs {
+    background-image: radial-gradient( var(--main-super-dark) 5%, transparent 57%);
 }
 
 .alpa img {
@@ -2201,6 +2242,7 @@ header a{
     justify-content: center;
     align-items: center;
     transition: all .5s;
+    text-align: center;
 }
 
 header a:hover {
