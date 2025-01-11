@@ -8,7 +8,7 @@ document.getElementById('content').addEventListener("scroll",()=>{
     },200)
     scroller();
 })
-document.getElementById('cdown').style=""
+//document.getElementById('cdown').style=""
 
 
 document.getElementById('content').addEventListener('click',()=>{
@@ -64,14 +64,7 @@ function magic(){
 
      if ((trig2<=(window.innerHeight || document.documentElement.clientHeight)-200)&& !(trig3<=50)) {
         el2.style.opacity = 1
-        el2.style.transform ='translateX(0)'
-            /* const new_style_element = document.createElement("style");
-            console.log('created');
-            new_style_element.textContent = "body { font-family: \"Geologica\"; } .text{font-size:20pt}"
-        var i = document.getElementsByTagName('iframe')[0].contentWindow.document//.getElementsByTagName('head')//.appendChild(new_style_element);
-        //var innerdoc = i.contentDocument || i.contentWindow.document;
-        console.log(i); */
-        
+        el2.style.transform ='translateX(0)'        
     }else{
         el2.style.opacity = 0
         el2.style.transform ='translateX(-200px)'
