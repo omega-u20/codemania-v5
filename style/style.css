@@ -2038,6 +2038,7 @@ span#sub {
 
 span#emph {
     font-family: monospace;
+    line-height: 44pt;
 }
 
 body{
@@ -2060,7 +2061,7 @@ body{
 
 #last p {text-align: center;}
 
-img#t11 {clip-path: inset(36% 14% 37% 21%);/* width: 26vw; */}
+img#t11 {clip-path: inset(37% 14% 31% 13%);/* width: 26vw; */}
 
 a#time_countdown_602137 {
     cursor: context-menu;
