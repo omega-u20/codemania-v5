@@ -166,8 +166,8 @@ td {
     }
     
     #home {
-        float: left;
-        margin-right: 24%;
+        position: absolute;
+        left: 8px;
     }
     
     header a{
@@ -445,15 +445,13 @@ div#arrowhost {
     
     #home {
         display: flex;
-        float: left;
-        margin-right: 9%;
     }
     
     header a{
         padding-left: 1em;
         padding-right: 1em;
         height: 2em;
-        width: 13vw;
+        width: 11vw;
         font-size: 9pt;
     }
 
@@ -640,9 +638,10 @@ a#menu {
 }
 
 div#arrowhost {
-    top: 17%;
+    position: relative;
+    top: 11vh;
     left: -9px;
-    width: 56vw;
+    width: 36vw;
 }
 
 #menudrop a:hover {
@@ -727,7 +726,8 @@ div#arrowhost {
     ul {line-height: 22pt;}
     
     table {
-        width: 100%;
+        /* width: 60vw; */
+        scale: .8;
         text-align: center;
     }
 
@@ -973,9 +973,10 @@ a#menu {
 }
 
 div#arrowhost {
+    display: none;
     rotate: 90deg;
-    top: 36.2em;
-    width: 99vh;
+    top: 77vh;
+    width: 84vh;
     left: -1%;
 }
 
@@ -1837,8 +1838,8 @@ div#menudrop {
     }
     
     #home {
-        float: left;
-        margin-right: 0%;
+        display: inherit;
+        position: inherit;
     }
     
     header a{
@@ -1966,10 +1967,15 @@ section#why {
 @media only screen and ((max-width: 1197px) and (min-width: 1024px)) {
     header a{
         font-size: 11pt;
-        width: 20vw;
+        width: 11vw;
         padding-right: .5em;
         padding-left: .5em;
     }
+
+#home {
+    position: inherit;
+    display: inherit;
+}
 
 }
 #arrowhost{
@@ -2001,8 +2007,7 @@ section#why {
 }
 
 #abtcont p::first-letter{
-    font-size: 15pt;
-    font-weight: bold;
+    font-size: 20pt;
 }
 .alpa p {
     margin-top: .2em;
@@ -2052,6 +2057,8 @@ body{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
+
+#last p {text-align: center;}
 
 img#t11 {clip-path: inset(36% 14% 37% 21%);/* width: 26vw; */}
 
@@ -2236,7 +2243,6 @@ header{
 }
 
 #home {
-    float: left;
     transition: opacity 1s;
 }
 #hmimg1{
