@@ -2007,7 +2007,7 @@ section#why {
 }
 
 #abtcont p::first-letter{
-    font-size: 20pt;
+    /* font-size: 20pt; */
 }
 .alpa p {
     margin-top: .2em;
