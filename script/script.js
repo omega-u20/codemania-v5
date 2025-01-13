@@ -28,7 +28,7 @@ function regredirect(){
     window.location.href='https://forms.gle/u3DZtj7929K4f8fu6'
 }
 function guidredirect(){
-    window.location.href='https://drive.google.com/file/d/1YdW3bDm7fmV6CGc2YsuJQsjsUo7_SZ6g/view?usp=sharing'
+    window.location.href='https://drive.google.com/file/d/1sjksHLC-zCGjcMxNFsHwf6RUkFy9SInB/view?usp=sharing'
 }
 function orderdirect(){
     window.location.href='https://forms.gle/QfJoXQGAT5fWyd6n8'
