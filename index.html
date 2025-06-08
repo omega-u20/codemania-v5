@@ -11,25 +11,36 @@
     <link rel="stylesheet" href="./style/style.css"> <!-- Link to external CSS file -->
     <link rel="stylesheet" href="./style/animations.css">
     
-    <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+    <!-- <script src="https://cdn.logwork.com/widget/countdown.js"></script> -->
 </head>
 
 <body>
+    <div id="preloader">
+        <h3 id="loadertxt">AWAI</h3>
+        <img src="./images/elm/preload.gif" alt="loader" id="loaderimg">
+    </div>
+    <script src="./script/preloader.js" type="text/JavaScript"></script>
+    <div id="confetti"><!-- 
+        <div class="cn1 cnf"></div>
+        <div class="cn2 cnf"></div>
+        <div class="cn3 cnf"></div>
+        <div class="cn4 cnf"></div> -->
+    </div>
     <header>
         <a id="menu" onclick="apear()">≡</a>
-        <a href="#contact">Contact Us</a>
+        <a href="#contact">Our Team</a>
         <a href="#shop">Shop</a>
         <a href="#prizes">Rules & Prizes</a>
-        <a href="#timeline">Schedule</a>
-        <a href="#about">About Us </a>
+        <a href="#timeline">Timeline</a>
+        <a href="#about">About Us</a>
         <a href="#scrollhost" id="home"><img src="./images/logo/w/cs.png" alt="Home" width="auto" height="40vw" id="hmimg1"><img src="./images/logo/cm.png" alt="Home" width="auto" height="70vw" id="hmimg2"><!-- https://img.icons8.com/ffffff/glyph-neue/64/home--v1.png --></a>
     </header>
     <div id="menudrop">
         <a href="#about" onclick="disapier()">About Us </a>
-        <a href="#timeline" onclick="disapier()">Schedule</a>
+        <a href="#timeline" onclick="disapier()">Timeline</a>
         <a href="#prizes" onclick="disapier()">Rules & Prizes</a>
         <a href="#shop" onclick="disapier()">Shop</a>
-        <a href="#contact" onclick="disapier()">Contact Us</a>
+        <a href="#contact" onclick="disapier()">Our Team</a>
     </div>
     <div id="hero"  class="big">
         <img src="./images/logo/cm.png" alt="Codemania Logo"height="auto">
@@ -55,15 +66,15 @@
         <div class="emp emp1mob"></div>
         <div id="heroover" class="scroln">
             <p><!-- Where Coders Compete and Empower<br> -->
-                <span id="head">Codemania v5.0</span><br>
-                <span id="emph">Think Twice | Code Once</span><br>
-                <span id="sub">Join SLTC's premier 12-hour coding challenge<br><b>February 1, 2025.</b><br>
-                <span id="magictxt">Are You Ready to Compete?</span></span>
+                <span id="head">Codemania</span><br>
+                <span id="emph">chapter 5 has ended successfully...!</span><br>
+                <span id="sub">Stay tuned for the next chapter<br>
+                <span id="magictxt">Congratulations to our winners</span></span>
                 </p>
                 <div class="btns">
-                    <button title="Click here to Register✨" onclick="regredirect()" type="button" class="">Register Now</button>
-                    <button title="Click here to see Guidebook✨" onclick="guidredirect()" type="button" class="">Event Guide</button>
-                    <!-- <button title="Stay Tuned✨" href="#" disabled class="dissabled-btn">Event Guide</button> -->
+                    <!-- <button title="Click here to Register✨" onclick="regredirect()" type="button" class="dissabled-btn">Register Now</button>
+                    <button title="Click here to see Guidebook✨" onclick="guidredirect()" type="button" class="dissabled-btn">Event Guide</button> -->
+                    <a href="#winner"><button title="Click to see winners✨" class="">See Winners</button></a>
                 </div>
         </div>
         <div class="emp emp1mob"></div>
@@ -75,23 +86,11 @@
                 <h2>What is Codemania?</h2>
                 <p>&emsp;&emsp;Codemania v5.0 is the fifth installment of our 12-hour- long algorithmic coding hackathon proudly organized by the IEEE Computer Society Student Branch Chapter of SLTC, 
                     designed to highlight your exceptional coding skills.</p>
-                    <!-- <div class="leftal">
-                        <p>Key Features: 
-                            <ul>
-                                <li>Exclusive for <b>SLTC Undergraduates</b></li>
-                                <li>12 Hours of Coding</li>
-                                <li>Prestigious Prizes </li>
-                                <li>Exciting Challenges</li>
-                            </ul>
-                        </p>
-                    </div> -->
+                
 
             <section id="why">
                 <h2>Why you should compete in Codemania v5.0?</h2>
-                <ul><!-- 
-                    <li>Encourage teamwork among participants to solve 
-                        coding challenges and develop innovative solutions. 
-                    </li> -->
+                <ul>
                     <li>Provide a platform for an in-person coding 
                         competition for programmers to tackle diverse and 
                         challenging coding problems. </li>
@@ -109,13 +108,33 @@
         <div id="timeline"></div>
 
         <section id="timecont">
-            <h2>Timeline</h2>
-            <div id="arrowhost">
-                <div class="arrow"></div>
-                <div class="arrow"></div>
-                <div class="arrow"></div>
+            <h2 id="winner">Winners</h2>
+            <div id="wincont">
+               <div id="win1" class="winners">
+                   <div class="winner" id="w2"></div>
+                  <h2>1<sup>st</sup> Runner-Up</h2>
+                  <h3>"ORDERBOARD"</h3>
+               </div>
+               <div id="win" class="winners">
+                   <div class="winner" id="w1"></div>
+                  <h2>Winner</h2>
+                  <h3>"X"</h3>
+               </div>
+               <div id="win2" class="winners">
+                   <div class="winner" id="w3"></div>
+                  <h2>2<sup>nd</sup> Runner-Up</h2>
+                  <h3>"TRIAD THINKERS"</h3>
+               </div>
             </div>
+           <p><span id="magictxtwin"onclick="confetify()" title="Press 'F' to Congratulate">Congratulations for your achivement!</span></p>
+
+            <h2>Timeline</h2>
             <table border="0" id="tm">
+                <!-- <div id="arrowhost">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                </div> -->
                 <tr>
                     <td class="tmimg"><img alt="ro" src="https://img.icons8.com/008366/pastel-glyph/100/digital-signature--v1.png"></td>
                     <td class="tmimg"><img alt="rc" src="https://img.icons8.com/008366/pastel-glyph/100/approved-webpage--v1.png"></td>
@@ -141,8 +160,8 @@
                     </td>
                 </tr>
             </table>
-            <a id="cdown" href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="Asia/Colombo" data-textcolor="#ffffff" data-date="2025-02-01 16:00" data-background="#3b3b3b" data-digitscolor="#00ffc7" data-unitscolor="#ffffff">Codemania v5.0 Starts In</a>            
-        </section>
+            <!-- <a id="cdown" href="https://logwork.com/countdown-timer" class="countdown-timer" data-timezone="Asia/Colombo" data-textcolor="#ffffff" data-date="2025-02-01 16:00" data-background="#3b3b3b" data-digitscolor="#00ffc7" data-unitscolor="#ffffff">Codemania v5.0 Starts In</a> --> 
+            </section>
         
         <div id="prizes"></div>
 
@@ -213,11 +232,9 @@
             <h4>Are You Ready to Compete? Take the challenge.</h4>
             
             <div class="btns">
-                <button title="Click here to Register✨" onclick="regredirect()" type="button" class="">Register Now</button>
-                <button title="Click here to see Guidebook✨" onclick="guidredirect()" type="button" class="">Event Guide</button>
-                <!-- <button title="Stay Tuned✨" href="#" disabled class="dissabled-btn">Event Guide</button> -->
+                <button title="Click here to Register✨" onclick="regredirect()" disabled type="button" class="dissabled-btn">Register Now</button>
+                <button title="Click here to see Guidebook✨" onclick="guidredirect()" disabled type="button" class="dissabled-btn">Event Guide</button>
             </div>
-                <!-- <button href="#" title="Stay Tuned✨" disabled class="dissabled-btn">Register Now</button> -->
         </section>
         
         <div id="shop"></div>
@@ -243,24 +260,7 @@
                     </td>
                 </tr>
             </table>
-            <button title="Click here to Preorder✨" onclick="orderdirect()" type="button" class="dissabled-btn">Pre-order Closed</button>
-            <!-- <hr>
-            <table border="0">
-                <tr>
-                    <td colspan="2"><h2>Codemania v5.0 Wirstband</h2></td>
-                </tr>
-                <tr class="imgs">
-                    <td>
-                        <img src="./images/t/band.png" alt="Codemania T-shirt front" id="t11" class="product-image" width="500em" >
-                    </td>
-                </tr>
-                <tr class="price1">
-                    <td>
-                        <p>Durable and sleek wristband with Codemania branding. Show your love for coding in style!</p>
-                        <p class="price"><b>Price:</b> Rs 300/=</p>
-                    </td>
-                </tr>
-            </table>      -->
+            <button title="✨" onclick="orderdirect()" type="button" disabled class="dissabled-btn">Delivered !</button>
         </section>
 
         <div id="contact"></div>
@@ -289,23 +289,23 @@
                     </tr>
                     <tr>
                         <td class="alpa">
-                            <h3><a target="_blank" rel="noopener" href="https://wa.me/94766938306?text=Hi%20I'm%20interested%20in%20Codemania%20v5.0.%20Can%20I%20have%20more%20information%3F">Geeth Rangika</a></h3>
+                            <h3><a target="_blank" rel="noopener" >Geeth Rangika</a></h3>
                             <p>Project Co-chairperson</p>
-                            <a target="_blank" rel="noopener" href="https://mail.google.com/a/sltc.ac.lk/mail/?view=cm&to=23ug1-0093@sltc.ac.lk&su=Re:Codemania-v5.0&body=Hello%2C%0A%0AI%27m%20interested%20in%20codemania%20v5.0.%20Can%20I%20have%20more%20information%20about%20it%3F%0A%0AThank%20you.">
+                            <a target="_blank" rel="noopener" >
                             <img alt="E-mail" src="https://img.icons8.com/008366/ios-filled/100/apple-mail.png" ></a>
-                            <a target="_blank" rel="noopener" target="_blank" rel="noopener" href="https://wa.me/94766938306?text=Hi%20I'm%20interested%20in%20Codemania%20v5.0.%20Can%20I%20have%20more%20information%3F">
+                            <a target="_blank" rel="noopener" target="_blank" rel="noopener" >
                             <img alt="phone" src="https://img.icons8.com/008366/ios-filled/100/apple-phone.png" ></a>
                         </td>
                         <td class="alpa">
-                            <h3><a target="_blank" rel="noopener" href="https://mail.google.com/a/sltc.ac.lk/mail/?view=cm&to=23ug1-0076@sltc.ac.lk&su=Re:Codemania-v5.0&body=Hello%2C%0A%0AI%27m%20interested%20in%20codemania%20v5.0.%20Can%20I%20have%20more%20information%20about%20it%3F%0A%0AThank%20you.">Vimarshana Kithmini</a></h3>
+                            <h3><a target="_blank" rel="noopener" >Vimarshana Kithmini</a></h3>
                             <p>Project Co-chairperson</p>
-                            <a target="_blank" rel="noopener" href="https://mail.google.com/a/sltc.ac.lk/mail/?view=cm&to=23ug1-0076@sltc.ac.lk&su=Re:Codemania-v5.0&body=Hello%2C%0A%0AI%27m%20interested%20in%20codemania%20v5.0.%20Can%20I%20have%20more%20information%20about%20it%3F%0A%0AThank%20you.">
+                            <a target="_blank" rel="noopener" >
                                 <img alt="E-mail" src="https://img.icons8.com/008366/ios-filled/100/apple-mail.png" ></a>
                         </td>
                         <td class="alpa">
-                            <h3><a target="_blank" rel="noopener" href="https://mail.google.com/a/sltc.ac.lk/mail/?view=cm&to=cit-23-02-0054@sltc.ac.lk&su=Re:Codemania-v5.0&body=Hello%2C%0A%0AI%27m%20interested%20in%20codemania%20v5.0.%20Can%20I%20have%20more%20information%20about%20it%3F%0A%0AThank%20you.">Chanuthi Minothma</a></h3>
+                            <h3><a target="_blank" rel="noopener" >Chanuthi Minothma</a></h3>
                             <p>Project Secretary</p>
-                            <a target="_blank" rel="noopener" href="https://mail.google.com/a/sltc.ac.lk/mail/?view=cm&to=cit-23-02-0054@sltc.ac.lk&su=Re:Codemania-v5.0&body=Hello%2C%0A%0AI%27m%20interested%20in%20codemania%20v5.0.%20Can%20I%20have%20more%20information%20about%20it%3F%0A%0AThank%20you.">
+                            <a target="_blank" rel="noopener" >
                                 <img alt="E-mail" src="https://img.icons8.com/008366/ios-filled/100/apple-mail.png" ></a>
                         </td>
                     </tr>
@@ -313,65 +313,23 @@
                 <h3>Our Valued Partner</h3> 
                 <p >This event has been proudly organized with the full support and the proud partnership of <b>Sri Lanka Technology Campus</b>.</p>
         </section>
-            <!-- <div id="contact">
-                <div class="contact">
-                    <div class="container">
-                        <div class="row">
-                            <div class="contact-left">
-                                <h1 class="sub-title">Contact Us</h1>
-                                <p><h3>If you have any questions, feel free to reach out to us.</h3></p>
-                                <p>Project Chairman</p>
-                                <p><i class="fa-solid fa-paper-plane"></i> palpolageeth@gmail.com</p>
-                                <p><i class="fa-solid fa-square-phone"></i> 0766938306</p><br>
-                                <p>Project Co-Chairman</p>
-                                <p><i class="fa-solid fa-paper-plane"></i> dissanayakekithmini@gmail.com</p>
-                                <p><i class="fa-solid fa-square-phone"></i> 0770714032</p><br>
-                                <p>Technical Head</p>
-                                <p><i class="fa-solid fa-paper-plane"></i> amaanahamed24@gmail.com</p>
-                                <p><i class="fa-solid fa-square-phone"></i> 0769223996</p><br>
-                                <div class="social-icons">
-                                    <a href="https://www.facebook.com/profile.php?id=61557430152468&mibextid=ZbWKwL">
-                                        <i class="fab fa-facebook"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/_._avii/profilecard/?igsh=MWZjbDBucDd1eW83OA==">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="https://x.com/PAravinda60071?t=9w9ufmHYqO6exlmSRrY7ig&s=09">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/prabhasha-aravinda-687325268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="contact-right">
-                                <form name="submit-to-google-sheet">
-                                    <input type="text" name="Name" placeholder="Your Name" required>
-                                    <input type="email" name="Email" placeholder="Your Email" required>
-                                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                                    <button type="submit" class="btn btn2" style="background-color: #008366; color: white;">Submit</button>
-                                </form>
-                                <span id="msg"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+            
 
         <footer>
             <h4>Brought to you by</h4>
             <div id="f_logo">
             <img alt="Computer Society" src="./images/logo/w/cs.png" width="90em">
-            <img alt="SLTC" src="./images/logo/w/sltc.png" width="100em">
+            <a href="https://sltc.ac.lk"><img alt="SLTC" src="./images/logo/w/sltc.png" width="100em"></a>
             </div>
             <p>Copyright © Codemania v5.0 • IEEE Computer Society Student Branch Chapter of SLTC<br>
-                Designed & developed by Udula Theekshana</p><br>
+                Designed & developed by <a href="https://www.linkedin.com/in/udula-theekshana-94a112275/" title="Completely Hand-coded✌🏽">Udula Theekshana</a></p><br>
             <a href="https://github.com/omega-u20" title="Designed & developed by Udula Theekshana ✨"><hr></a>
         </footer>
     </div>
     <img src="./images/owl.png" alt="Scroll Image" width="auto" height="20%" id="owl" class="onorm">
    <!-- Link to external JavaScript file -->
    <script src="./script/script.js" type="text/JavaScript"></script>
+   <script src="./script/confetti.js" type="text/JavaScript"></script>
 </body>
 </html>
 

@@ -5,11 +5,31 @@ document.getElementById('content').addEventListener("scroll",()=>{
       }, 100);
     setTimeout(()=>{
         magic()
+        partypoper()
     },200)
     scroller();
 })
-//document.getElementById('cdown').style=""
 
+var inview =false
+var poped = false
+
+document.addEventListener('keyup',(e)=>{
+if(((e.key=='f')||(e.key=='F'))&& inview){
+    console.log('congrats');
+    confetify();
+}
+})
+
+function partypoper(){
+    const pop = document.getElementById('winner').getBoundingClientRect().top
+    if ((pop<= 200)&& !poped) {
+        confetify()
+        poped=true
+    }
+}
+
+//document.getElementById('cdown').style=""
+const message ='Codemania v5.0 has ended.\nTry again next time'
 
 document.getElementById('content').addEventListener('click',()=>{
     document.getElementById('menudrop').style.transform='translateY(-50em)'
@@ -19,19 +39,27 @@ document.getElementById('timecont').addEventListener('click',function (e){
     e.preventDefault()
 })
 
+//scroll transparency
 document.getElementById('heroover').addEventListener('wheel',function (e){
     /* console.log('e'); */
     document.getElementById('content').scrollTop+= e.deltaY
 })
+document.getElementById('confetti').addEventListener('wheel',function (e){
+    document.getElementById('content').scrollTop+= e.deltaY
+})
+
 
 function regredirect(){
-    window.location.href='https://forms.gle/u3DZtj7929K4f8fu6'
+    alert(message)
+    //window.location.href='https://forms.gle/u3DZtj7929K4f8fu6'
 }
 function guidredirect(){
-    window.location.href='https://drive.google.com/file/d/1sjksHLC-zCGjcMxNFsHwf6RUkFy9SInB/view?usp=sharing'
+    alert(message)
+    //window.location.href='https://drive.google.com/file/d/1sjksHLC-zCGjcMxNFsHwf6RUkFy9SInB/view?usp=sharing'
 }
 function orderdirect(){
-    window.location.href='https://forms.gle/QfJoXQGAT5fWyd6n8'
+    alert(message)
+    //window.location.href='https://forms.gle/QfJoXQGAT5fWyd6n8'
 }
 
 function magic(){
@@ -64,10 +92,12 @@ function magic(){
 
      if ((trig2<=(window.innerHeight || document.documentElement.clientHeight)-200)&& !(trig3<=50)) {
         el2.style.opacity = 1
-        el2.style.transform ='translateX(0)'        
+        el2.style.transform ='translateX(0)'     
+        inview=true
     }else{
         el2.style.opacity = 0
         el2.style.transform ='translateX(-200px)'
+        inview=false
     }
 
      if ((trig3<=(window.innerHeight || document.documentElement.clientHeight)-200)&& !(trig5<=50)) {
@@ -124,6 +154,7 @@ function herocard(){
     var winh = (window.innerHeight || document.documentElement.clientHeight);
 
     if((trig1>200)&& !first && !triggered){
+        poped = false
         triggered =true
         heroow.style.opacity=0
         heroow.style.transform='perspective(12cm) rotateX(30deg)'
@@ -167,6 +198,7 @@ function trigger(){
 
     if(midl>((window.innerHeight || document.documentElement.clientHeight) - offset)){
         owl.className= 'onorm'
+        document.getElementById('hero').className= 'big'
     }
     if(midl<=((window.innerHeight || document.documentElement.clientHeight) - offset)){
        // console.log('middle');

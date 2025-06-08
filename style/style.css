@@ -9,6 +9,8 @@
     --main-boders: #007359;
     --main:#008366;
     --main-light:#00ffc7;
+    /* --winner-dark: #db63ff; */
+    /* --winner-light:#efb9ff; */
     font-family: "Geologica";
     font-weight: normal;
     line-height: 20pt;
@@ -61,7 +63,9 @@ html {
         font-size: 15pt;
         line-height: 5pt;
     }
-    
+    .winner {
+         width: 345px; 
+         height: 210px; }
     span#emph {
         font-size: 18pt;
         font-family: monospace;
@@ -628,6 +632,10 @@ a#menu {
         scroll-behavior: smooth;
     }
 
+div#wincont {
+    flex-direction: column;
+}
+
 .sublimel {
     padding: 1em;
 }
@@ -920,6 +928,9 @@ a#menu {
 
 }
 @media only screen and (max-width: 460px) {
+    .cnf{
+        z-index: 60;
+    }
     #menudrop{
         height: fit-content;
         width: 85%;
@@ -967,6 +978,21 @@ a#menu {
         width: 100%;
         scroll-behavior: smooth;
     }
+
+#timecont p {
+    text-align: center;
+}
+
+.winners {
+    width: 100%;
+}
+
+div#wincont {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
 
 .sublimel {
     padding: 1em;
@@ -1421,6 +1447,10 @@ section#why {
         width: 100%;
         scroll-behavior: smooth;
     }
+
+.winner {
+    scale: 80%;
+}
 
 #shopcont table {
     height: 24vh;
@@ -1976,8 +2006,35 @@ section#why {
     position: inherit;
     display: inherit;
 }
-
+.winner{
+    scale: 75%;
+    width: 300px;
+    height: 182px;
+    }
+    
+    .winners{
+        width: 33%;
+    }
 }
+@media only screen and (max-width: 1024px)  {
+    div#wincont {
+        flex-direction: column;
+    }
+    .winner {
+        width: 345px; 
+         height: 210px; }
+}
+@media only screen and (min-width:460px){  
+    .cnf{
+        z-index: 11;
+    }
+}
+#loaderimg{
+    scale: .25;
+    z-index: 1;
+    position: absolute;
+}
+
 #arrowhost{
     position: relative;
     top: 12%;
@@ -1985,7 +2042,6 @@ section#why {
     height: 5vh;
     display: flex;
     justify-content: space-between;
-    /* border: solid red; */
     align-items: center;
 }
 
@@ -2004,10 +2060,6 @@ section#why {
     align-content: center;
     justify-content: center;
     align-items: center;
-}
-
-#abtcont p::first-letter{
-    /* font-size: 20pt; */
 }
 .alpa p {
     margin-top: .2em;
@@ -2057,6 +2109,112 @@ body{
     width: 100%;
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+h3#loadertxt {
+    z-index: 10;
+}
+
+div#preloader {
+    z-index: 999999;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    transition: all 2s;
+}
+
+.cn4 {
+    width: 23px;
+    height: 23px;
+    background-color: var(--main-dark);
+}
+
+.cn3 {
+    width: 21px;
+    height: 9px;
+    background-color: var(--main-light);
+}
+
+.cn2 {
+    width: 7px;
+    height: 23px;
+    background-color: var(--main);
+}
+
+.cn1 {
+    width: 10px;
+    height: 20px;
+    background-color: var(--main-light);
+}
+
+.cnf {
+    position: relative;
+    float: left;
+    top: -23px;
+}
+
+div#confetti {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.winners h2 {
+    text-align: center;
+    text-box-trim: trim-both;
+}
+
+.winners h3 {
+    margin-top: 0;
+}
+
+.winner {
+    /* width: 345px; */
+    /* height: 210px; */
+    background-color: azure;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    border: solid 3px var(--main-light);
+}
+
+div#w3 {
+    background-image: url(../images/personal/teams/3.jpg);
+}
+
+div#w1 {
+    background-image: url(../images/personal/teams/1.jpg);
+}
+
+div#w2 {
+    background-image: url(../images/personal/teams/2.jpg);
+}
+
+.winners img {
+    width: 100%;
+}
+
+.winners {
+    /* width: 33%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wincont {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #last p {text-align: center;}
@@ -2119,7 +2277,6 @@ h1{
 
 div .triggers {
     display: block;
-    /* border: solid blue 2px; */
 }
 
 div#crdhero {
@@ -2135,6 +2292,12 @@ footer {
     bottom: 58px;
     padding-left: 1em;
     padding-right: 1em;
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 footer h4 {
@@ -2185,6 +2348,7 @@ h3 a:hover {
 
 .tmimg img {
     transition: all 1s;
+    border-radius: 10px;
 }
 
 #tming img {
@@ -2337,8 +2501,13 @@ section{
 }
 
 iframe {
-    cursor: none;
     font-size: 20pt;
+    filter: opacity(.2);
+}
+
+iframe a {
+    pointer-events: none;
+    cursor: context-menu;
 }
 
 section#why {

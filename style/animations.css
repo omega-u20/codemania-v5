@@ -14,7 +14,7 @@
     width: 25px;
     height: 25px;
     transform: rotateZ(-45deg);
-    animation: scrl 4s infinite;
+    animation: scrl 4s infinite linear;
 }
 @keyframes scrl{
     0%{
@@ -40,7 +40,7 @@
     animation-delay: 2s;
 }
 #d{
-    animation-delay: 3s;
+    animation-delay:3s;
 }
 
 #magictxt{
@@ -61,5 +61,106 @@
     }
     100%{
         background-position: 0% 0%;
+    }
+}
+
+#magictxtwin{
+    background: linear-gradient(130deg, #ffffff 40%, var(--main-light) 50%, #ffffff 60%);
+    background-clip: text;
+    background-size: 200% 100%;
+    color: transparent;
+    animation: magictxt 8s linear infinite;
+    font-weight: 800;
+    font-size: larger;
+    /* -webkit-text-stroke: #2f003c 1px; */
+}
+@keyframes magictxt {
+    0%{
+        background-position: 200% 0%;
+    }
+    50%{
+        background-position: 100% 0%;
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+
+#head{
+    background: linear-gradient(130deg, #ffff 70%, var(--main-light) 71%,var(--main-light) 80%, var(--main) 81%,var(--main) 90%, #ffff 91%);
+    background-clip: text;
+    background-size: 200% 100%;
+    color: transparent;
+    animation: swoop linear;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+    /* font-weight: 800; */
+    /* font-size: larger; */
+}
+@keyframes swoop {
+    0%{
+        background-position: 200% 0%;
+    }
+    50%{
+        /* background-position: 100% 0%; */
+    }
+    100%{
+        background-position: 0% 0%;
+    }
+}
+.cn1{
+    animation: fall 3s ease-out ,rol1 2s linear infinite;
+}
+.cn2{
+    animation: fall 3s ease-out ,rol2 2s linear infinite;
+}
+.cn3{
+    animation: fall 3s ease-out ,rol3 2s linear infinite;
+}
+.cn4{
+    animation: fall 3s ease-out ,rol4 2s linear infinite;
+}
+@keyframes fall{
+    0%{
+        top:-24px
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        top: 70%;
+        opacity: 0;
+    }
+}
+@keyframes rol1{
+    0%{
+        transform: rotate3d(1, 1, 1, 0);
+    }
+    100%{
+        transform: rotate3d(10, 8, 12, 720deg);
+    }
+}
+@keyframes rol2{
+    0%{
+        transform: rotate3d(1, 1, 1, 0);
+    }
+    100%{
+        transform: rotate3d(2, 36, 20, 620deg);
+    }
+}
+@keyframes rol3{
+    0%{
+        transform: rotate3d(1, 1, 1, 0);
+    }
+    100%{
+        transform: rotate3d(40, 58, 18, 420deg);
+    }
+}
+@keyframes rol4{
+    0%{
+        transform: rotate3d(1, 1, 1, 0);
+    }
+    100%{
+        transform: rotate3d(50, 80, 2, 520deg);
     }
 }
